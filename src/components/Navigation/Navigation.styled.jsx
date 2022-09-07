@@ -2,13 +2,11 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
-  /* display: inline-block; */
   text-decoration: none;
   padding-right: 15px;
   font-weight: 500;
   color: #ffff;
   font-size: 18px;
-
   &.active {
     color: #2196f3;
   }

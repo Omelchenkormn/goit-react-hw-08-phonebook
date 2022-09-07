@@ -39,40 +39,34 @@ const FormRegistred = () => {
           addNewUsers(data);
         })}
       >
-        <Label htmlFor="name">
-          <Input
-            type="text"
-            name="name"
-            {...register('name', {
-              register: true,
-              required: 'This is required',
-            })}
-            placeholder="Name..."
-          />
-        </Label>
-        <Label htmlFor="email">
-          <Input
-            type="email"
-            name="email"
-            {...register('email', {
-              register: true,
-              required: 'This is required',
-            })}
-            placeholder="Email..."
-          />
-        </Label>
-        <Label htmlFor="password">
-          <Input
-            type="password"
-            name="password"
-            {...register('password', {
-              register: true,
-              required: 'This is required',
-              suggested: 'current-password',
-            })}
-            placeholder="Password..."
-          />
-        </Label>
+        <Input
+          type="text"
+          name="name"
+          {...register('name', {
+            register: true,
+            required: 'This is required',
+          })}
+          placeholder="Name..."
+        />
+        <Input
+          type="email"
+          name="email"
+          {...register('email', {
+            register: true,
+            required: 'This is required',
+          })}
+          placeholder="Email..."
+        />
+        <Input
+          type="password"
+          name="password"
+          {...register('password', {
+            register: true,
+            required: 'This is required',
+            suggested: 'current-password',
+          })}
+          placeholder="Password..."
+        />
         <Button type="submit">Create new user</Button>
       </Forms>
     </Container>
