@@ -1,19 +1,12 @@
 import { Title, List, Span, Button, IconSVG } from './ListItem.styled';
-import { ClipLoader } from 'react-spinners';
-import { useSelector } from 'react-redux';
-import {
-  useDeleteContactMutation,
-  useFetchContactsQuery,
-} from 'redux/contacts/fetchApi';
+import { useDeleteContactMutation } from 'redux/contacts/fetchApi';
 import Filter from 'components/FilterContact/Filter';
 import { useFilter } from 'components/hook/useFilter';
 import { useEffect } from 'react';
 
 export const ListItem = () => {
-  // const { data = [] } = useFetchContactsQuery();
   const [deleteContact, { isSuccess }] = useDeleteContactMutation();
-  // const contacts = data;
-  const { filterByName, filter, setFilter, status, refetch } = useFilter();
+  const { filterByName, filter, setFilter, refetch } = useFilter();
 
   useEffect(() => {
     refetch();
@@ -35,7 +28,6 @@ export const ListItem = () => {
             </Span>
             <Button type="button" onClick={() => handeleDelete(id)}>
               <IconSVG />
-              {/* {isDeleting ? <ClipLoader size={10} /> : <IconSVG />} */}
             </Button>
           </List>
         ))}
